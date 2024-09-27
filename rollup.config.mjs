@@ -38,5 +38,8 @@ export default [
             terser(),
         ],
         external: ["react", "react-dom"],
+    },
+    {
+        input: "src/index.ts",
     }
 ];
