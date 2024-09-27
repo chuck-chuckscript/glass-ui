@@ -1,5 +1,8 @@
 {
-  "name": "glass-ui",
+  "name": "@chuck-chuckscript/glass-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/chuck-chuckscript"
+  },
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -28,5 +31,7 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+
+
 }
