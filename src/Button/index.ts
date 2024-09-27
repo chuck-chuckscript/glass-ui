@@ -1,2 +1,2 @@
 export {Button} from './Button'
-export {ButtonGlass} from './Button.types'
+export {ButtonProps} from './Button.types'

@@ -13,14 +13,14 @@ export default [
         input: "src/index.ts",
         output: [
             {
-                file: "dist/cjs/index.js",
-                format: "cjs",
-                sourcemap: true,
+                file: packageJson.main,
+                format: 'cjs',
+                sourcemap: true
             },
             {
-                file: "dist/esm/index.js",
-                format: "esm",
-                sourcemap: true,
+                file: packageJson.module,
+                format: 'esm',
+                sourcemap: true
             }
         ],
         plugins: [
@@ -32,15 +32,11 @@ export default [
                 extract: true,
                 minimize: true,
                 modules: true,
-                use: ['sass']
+                use: ['sass'],
+                sourceMap: true
             }),
             terser(),
         ],
         external: ["react", "react-dom"],
-    },
-    {
-        input: "src/index.ts",
-        output: [{ file: "dist/types/types.d.ts", format: "es" }],
-        plugins: [dts.default()],
-    },
+    }
 ];

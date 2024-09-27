@@ -1,9 +1,8 @@
 import React from "react";
 
-type StyleVariant = '';
+type StyleVariant = 'default' | 'custom';
 
-interface ButtonProps{
-    variant: StyleVariant
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+    variant?: StyleVariant
 }
 
-export type ButtonGlass = ButtonProps & React.HTMLAttributes<HTMLButtonElement>;
