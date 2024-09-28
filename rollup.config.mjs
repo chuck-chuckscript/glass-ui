@@ -27,7 +27,7 @@ export default [
             peerDepsExternal(),
             resolve(),
             commonjs(),
-            typescript({ tsconfig: "./tsconfig.json" }),
+            typescript({ tsconfig: "./tsconfig.json", useTsconfigDeclarationDir: true, clean: true }),
             postcss({
                 extract: true,
                 minimize: true,
@@ -38,8 +38,5 @@ export default [
             terser(),
         ],
         external: ["react", "react-dom"],
-    },
-    {
-        input: "src/index.ts",
     }
 ];
