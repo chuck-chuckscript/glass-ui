@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "importHelpers": true,
+    "moduleResolution": "Node",
     "jsx": "react",
     "declaration": true,
     "declarationDir": "./dist/types",

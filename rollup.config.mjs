@@ -28,15 +28,11 @@ export default [
             resolve(),
             commonjs(),
             typescript({ tsconfig: "./tsconfig.json", useTsconfigDeclarationDir: true, clean: true }),
-            postcss({
-                extract: true,
-                minimize: true,
-                modules: true,
-                use: ['sass'],
-                sourceMap: true
-            }),
             terser(),
         ],
         external: ["react", "react-dom"],
     }
 ];
+
+
+// Нужно прикрутить styled-component вместо обычных scss модулей
