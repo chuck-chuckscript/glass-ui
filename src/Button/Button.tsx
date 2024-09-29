@@ -3,7 +3,7 @@ import {ButtonProps} from "./Button.types";
 import styled from '@emotion/styled';
 
 
-const GlassButton : React.FC<ButtonProps> = ({children, className, ...props}) => {
+const GlassButton : React.FC<ButtonProps> = ({children,...props}) => {
 
     return (
         <button {...props}>
@@ -12,9 +12,8 @@ const GlassButton : React.FC<ButtonProps> = ({children, className, ...props}) =>
     );
 };
 
-export const Button = styled(GlassButton)(
-    {
-        color: 'red',
-        borderRadius: 20
-    }
-)
+export const Button = styled(GlassButton)({
+    backgroundColor: 'red',
+    borderRadius: 20,
+    color: 'white',
+})
